@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>scheme-2</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@600;700;800;900&family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
+<style>
+  /* Слайд 2: что лежит в папке. Рендер 1080×1350 → scheme-2.png */
+  :root { --ink:#000; --paper:#fff; --bg:#dbe8ff; --main:#5294ff; --cyan:#90e0ff; --pink:#ff90e8; --yel:#facc00; --bw:7px; --sh:14px; --r:12px; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { width:1080px; height:1350px; overflow:hidden; }
+  body { font-family:Onest, sans-serif; color:var(--ink); background:var(--bg); padding:60px 74px 0 60px; position:relative; }
+  .box { border:var(--bw) solid var(--ink); box-shadow:var(--sh) var(--sh) 0 var(--ink); border-radius:var(--r); background:var(--paper); }
+
+  h1 { padding:30px 44px; font-weight:900; font-size:80px; line-height:1.02; letter-spacing:-.025em; }
+
+  .list { margin-top:40px; padding:14px 38px; }
+  .row { display:flex; align-items:center; gap:28px; padding:22px 0; border-bottom:4px solid var(--ink); }
+  .row:last-child { border-bottom:0; }
+  .chip { flex:none; width:250px; text-align:center; border:5px solid var(--ink); border-radius:10px; box-shadow:6px 6px 0 var(--ink); padding:10px 0; font-family:'JetBrains Mono', monospace; font-weight:800; font-size:36px; }
+  .c1 { background:var(--main); } .c2 { background:var(--cyan); } .c3 { background:var(--pink); } .c4 { background:var(--yel); }
+  .row p { font-weight:800; font-size:42px; line-height:1.15; }
+  .row p span { display:block; font-weight:600; font-size:32px; opacity:.7; margin-top:4px; }
+
+  .warn { margin-top:40px; padding:26px 34px; background:var(--ink); color:#fff; border-radius:var(--r); box-shadow:var(--sh) var(--sh) 0 var(--yel); font-weight:800; font-size:40px; line-height:1.2; max-width:700px; }
+  .warn b { color:var(--yel); font-weight:900; }
+
+  .foot { position:absolute; left:60px; bottom:50px; font-weight:800; font-size:28px; }
+  .mascot { position:absolute; right:18px; bottom:24px; width:270px; height:270px; }
+</style>
+</head>
+<body>
+  <h1 class="box">Что лежит<br>в папке</h1>
+
+  <div class="list box">
+    <div class="row"><div class="chip c1">notes/</div><p>Заметки по темам<span>одна тема — один файл</span></p></div>
+    <div class="row"><div class="chip c2">sources/</div><p>Твои оригиналы<span>файлы и скрины, не меняются</span></p></div>
+    <div class="row"><div class="chip c3">index.md</div><p>Оглавление<span>Claude читает его первым</span></p></div>
+    <div class="row"><div class="chip c4">log.md</div><p>Журнал<span>что и когда записано</span></p></div>
+  </div>
+
+  <div class="warn"><b>Не сходится с записанным?</b><br>Спросит, а не перезапишет</div>
+
+  <div class="foot">ИИ так сойдёт</div>
+  <img class="mascot" src="raccoon.svg" alt="">
+</body>
+</html>

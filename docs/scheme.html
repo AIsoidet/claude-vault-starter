@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>scheme-1</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@600;700;800;900&family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
+<style>
+  /* Слайд 1: только суть, без папок и команд. Детали — scheme-2-detail.html. Рендер 1080×1350 → scheme.png */
+  :root { --ink:#000; --paper:#fff; --bg:#dbe8ff; --main:#5294ff; --yel:#facc00; --bw:7px; --sh:14px; --r:12px; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { width:1080px; height:1350px; overflow:hidden; }
+  body { font-family:Onest, sans-serif; color:var(--ink); background:var(--bg); padding:60px 74px 0 60px; position:relative; }
+  .box { border:var(--bw) solid var(--ink); box-shadow:var(--sh) var(--sh) 0 var(--ink); border-radius:var(--r); background:var(--paper); }
+
+  h1 { padding:34px 44px; font-weight:900; font-size:88px; line-height:1.02; letter-spacing:-.025em; }
+
+  .step { display:flex; align-items:center; gap:30px; padding:30px 38px; }
+  .num { flex:none; width:84px; height:84px; display:grid; place-items:center; font-family:'JetBrains Mono', monospace; font-weight:800; font-size:50px; border:6px solid var(--ink); border-radius:12px; background:var(--yel); }
+  .step h2 { font-weight:900; font-size:52px; line-height:1.05; letter-spacing:-.02em; }
+  .step p { font-weight:600; font-size:34px; line-height:1.25; margin-top:8px; }
+
+  .link { height:40px; margin-left:76px; width:7px; background:var(--ink); position:relative; }
+  .link::after { content:""; position:absolute; left:-12px; bottom:-14px; border:15px solid transparent; border-top:17px solid var(--ink); border-bottom:0; }
+  .gap { height:18px; }
+
+  .foot { position:absolute; left:60px; bottom:50px; font-weight:800; font-size:28px; }
+  .mascot { position:absolute; right:18px; bottom:24px; width:270px; height:270px; }
+</style>
+</head>
+<body>
+  <h1 class="box">Второй мозг<br>без плагинов</h1>
+  <div class="gap"></div>
+  <div class="link"></div>
+  <div class="gap"></div>
+
+  <div class="step box">
+    <div class="num">1</div>
+    <div><h2>Кидаешь в чат</h2><p>текст, файл, скрин — как есть</p></div>
+  </div>
+  <div class="gap"></div>
+  <div class="link"></div>
+  <div class="gap"></div>
+
+  <div class="step box">
+    <div class="num">2</div>
+    <div><h2>Claude раскладывает</h2><p>сам, по темам, с оглавлением</p></div>
+  </div>
+  <div class="gap"></div>
+  <div class="link"></div>
+  <div class="gap"></div>
+
+  <div class="step box">
+    <div class="num">3</div>
+    <div><h2>Спрашиваешь</h2><p>отвечает по твоим записям</p></div>
+  </div>
+
+  <div class="foot">ИИ так сойдёт</div>
+  <img class="mascot" src="raccoon.svg" alt="">
+</body>
+</html>
